@@ -1,0 +1,16 @@
+.equipe {
+    display: block;
+
+}
+
+.equipe h2 {
+    color: #303D4D;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.equipe span {
+    color: #303D4D;
+    margin-bottom: 10px;
+    font-size: 15px;
+}

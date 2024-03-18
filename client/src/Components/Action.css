@@ -1,0 +1,13 @@
+/* action composant */
+.action {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5%;
+  }
+  
+  .action img {
+    width: 19px;
+    height: 20px;
+  
+  }

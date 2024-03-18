@@ -1,0 +1,140 @@
+.contact {
+    width: 100%;
+    height: 741px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3%;
+    justify-content: center;
+
+
+
+}
+
+.contact-left {
+    width: 651px;
+    height: 710px;
+    background: var(--first-color);
+    margin-top: 20px;
+    margin-left: 40px;
+
+}
+
+.contact-left h1 {
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 5%;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+.contact-right-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.contact-right-input input {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid var(--border-color);
+
+}
+
+input {
+    margin-top: 10px;
+}
+
+label {
+    font-weight: 900;
+}
+
+.contact-right-input label {
+    width: 100%;
+    color: var(--second-color);
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: normal;
+
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.contact-right-service {
+    margin-top: 40px;
+}
+
+.contact-right-service h2 {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.contact-right-message {
+    display: grid;
+    align-items: center;
+    margin-right: 40px;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.contact-right-message input {
+    display: flex;
+    padding: 4rem 5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.contact-right-message label {
+    width: 100%;
+    color: var(--second-color);
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: normal;
+}
+
+.contact-right-input input::placeholder {
+    color: #999;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-right-message button {
+    margin-left: 75%;
+}
+
+.contact-right-reserve h2 {
+    color: var(--second-color);
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: normal;
+}
+
+.contact-right-reserve__icon {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-right-reserve__icon-text {
+    display: flex;
+    gap: 20px;
+}
+.contact-right-service h2{
+    color: var(--second-color);
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: normal;
+}

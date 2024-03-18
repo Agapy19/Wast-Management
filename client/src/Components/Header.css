@@ -1,0 +1,43 @@
+/* Header.css */
+header {
+    background-color: var(--background);
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10%;
+}
+
+nav {
+    display: flex;
+    margin-right: 10%;
+   gap: 30px;
+
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 50px;
+}
+
+.nav-contact {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid var(--text-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10%;
+}

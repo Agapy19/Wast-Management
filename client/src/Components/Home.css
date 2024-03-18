@@ -1,0 +1,379 @@
+/* Main */
+.home {
+  background-image: url(/src/Images/baground.png);
+  display: grid;
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  width: 100%;
+}
+
+.home__text {
+  color: var(--text-color);
+  margin-top: 140px;
+  width: 30%;
+  margin-left: 10%;
+  font-size: 30px;
+}
+
+
+
+.hom__text-btn {
+  display: flex;
+  gap: 10%;
+  margin-top: 10%;
+}
+
+.home-service {
+  display: flex;
+  margin-left: 10%;
+  width: 80%;
+  height: 20vh;
+  margin-top: -50px;
+  border: 1px solid#D9D9D9;
+  gap: 3%;
+
+}
+
+.home-service img {
+  width: 20%;
+  height: 10vh;
+  margin-top: 3%;
+  margin-left: 8%;
+}
+
+.home-about {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.home-about h1 {
+  color: var(--second-color);
+  margin-top: 50px;
+  width: 30%;
+  font-size: 30px;
+}
+
+.home-about p {
+  color: var(--second-color);
+  margin-top: 20px;
+  width: 50%;
+  font-size: 20px;
+}
+
+.home-about__contain {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* margin-top: 10%; */
+}
+
+.home-about__contain img {
+  width: 80%;
+  height: 70%;
+  margin-top: 20px;
+}
+
+
+.home-about__contain-box2 p {
+  width: 80%;
+  color: var(--second-color);
+  margin-top: 20px;
+  font-size: 20px;
+  margin-left: 23%;
+}
+
+.home-about__contain-box2 button {
+  margin-left: 23%;
+  margin-bottom: 20%;
+  margin-top: 10%;
+
+}
+
+/* Bar de progression */
+
+.progress-bar-container{
+  margin-top: 5%;
+}
+
+.progress-bar-fill{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 23%;
+
+}
+.progress-bar-label{
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--second-color);
+
+}
+.progress-bar-percent{
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--second-color);
+}
+.progress-bar {
+  width: 80%;
+  height: 20px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-left: 23%;
+}
+
+
+
+/* Introduction des services sur la page home */
+.home-about__container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* margin-top: 10%; */
+  width: 80%;
+  margin-left: 10%;
+}
+
+.home-about__contain-service {
+  width: 80%;
+  height: 70%;
+  margin-top: 20px;
+}
+
+.home-about__contain-service h1 {
+  color: var(--second-color);
+  margin-top: -70px;
+  font-size: 30px;
+}
+
+.home-about__contain-service p {
+  color: var(--second-color);
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.home-about__contain-service button {
+  margin-top: 25%;
+}
+
+.home-about__contain-service-box2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+}
+
+.home-about__contain-service-box2 img {
+  width: 310px;
+}
+
+/* home client */
+.home-client {
+  width: 100%;
+}
+
+.home-client h1 {
+  width: 100%;
+  margin-top: 5%;
+  margin-left: 60%;
+  color: var(--second-color);
+  font-size: 40px;
+}
+
+.home-client-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  height: 50%;
+  margin-left: 30%;
+  margin-top: 5%;
+  gap: 5%;
+
+}
+
+/* home contact */
+.home-contact {
+  display: grid;
+  background-image: url(/src/Images/bg.png);
+  background-position: center;
+  background-size: cover;
+  height: 548px;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.home-contact-contain {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.hom-contact-contain-box2 img {
+  width: 100%;
+  height: 315px;
+}
+
+.hom-contact-contain-box1 h1 {
+  width: 50%;
+  color: var(--text-color);
+  font-size: 40px;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.hom-contact-contain-box1 button {
+  margin-left: 20%;
+  margin-top: 15%;
+
+}
+
+.value-client {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  text-align: center;
+}
+
+.item h2 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.item span {
+  font-size: 16px;
+  display: block;
+  color: #D9D9D9;
+}
+
+/* home testimony */
+.home-testimony {
+  margin-top: 30px;
+}
+
+.home-testimony-text {
+  text-align: center;
+}
+
+.home-testimony-text {
+  color: var(--second-color);
+  font-size: 20px;
+}
+
+.home-testimony-text p {
+  margin-top: 20px;
+}
+
+.temoignage-client h2 {
+  color: var(--second-color);
+  margin-top: 10px;
+}
+
+.temoignage-client p {
+  width: 329px;
+  height: 164px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 25px;
+  color: var(--second-color);
+
+}
+
+.avatar {
+  margin-top: -40px;
+}
+
+.temoignage-client {
+  width: 385px;
+  height: 342px;
+  text-align: center;
+
+}
+
+
+.home-testimony-temoignage {
+  display: flex;
+  gap: 2%;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.home-testimony-temoignage :hover {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.home-testimony-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.home-commande {
+  background-image: url(/src/Images/bgcomand.png);
+  background-position: center;
+  background-size: cover;
+  height: 465px;
+  width: 100%;
+  margin-top: 3%;
+}
+
+/* .home-commande-text h1{
+    color: var(--text-color);
+    width: 30%;
+    margin-left: 5%;
+    font-size: 40px;
+  } */
+
+.home-commande-contain {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.home-commande-contain p {
+  width: 535px;
+  height: 154px;
+  color: var(--text-color);
+  margin-left: 22%;
+  margin-top: 4%;
+  font-size: 20px;
+}
+
+/* Home commande */
+
+.input-with-button {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 70px;
+  background-color: var(--text-color);
+  margin-left: 10%;
+  margin-top: 4%;
+}
+
+.input-with-button input[type="text"] {
+  flex: 1;
+  border-radius: 5px 0 0 5px;
+  padding: 5px;
+  border: 1px solid var(--text-color);
+}
+
+.input-with-button button {
+  width: 200px;
+  height: 53px;
+  border-radius: 0 5px 5px 0;
+  padding: 5px 10px;
+  margin-right: 20px;
+  background-color: var(--background);
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+}
+
+.input-with-button input::placeholder {
+  color: black;
+  opacity: 0.8;
+  font-size: 15px;
+}
