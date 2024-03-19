@@ -1,0 +1,74 @@
+/* TopBar.css */
+.top-bar {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    width: 100%;
+    height: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-left: 8%;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-content-icons {
+    display: flex;
+    margin-left: 40px;
+    align-items: center;
+    margin-top: 15px;
+    gap: 2px;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 5px;
+    color: var(--text-color);
+    width: 30px;
+    height: 20px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+
+}
+
+.social-links .icon {
+    font-size: 20px;
+    /* margin-left: 5%; */
+}
+
+.social-links .icon:first-child {
+    margin-right: 0;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ccc;
+}
+@media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
+        .top-bar-content {
+            gap: 10px; /* Réduire l'espacement entre les éléments */
+        }
+    
+        .social-links {
+            display: none; /* Cacher les liens sociaux sur les petits écrans */
+        }
+    }
+}

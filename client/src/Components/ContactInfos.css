@@ -1,0 +1,24 @@
+:root {
+    --bg-color: #7ED957;
+    --second-color: #303D4D;
+    --text-color: #fff;
+    --main-color: #D19C13;
+    --border-color: #000000;
+    --first-color: #084130;
+    --font-family: poppins;
+
+}
+
+.contact-info {
+    display: grid;
+    gap: 40px;
+    margin-top: 10%;
+    margin-left: 65px;
+}
+
+.contac-info__img {
+    display: flex;
+    gap: 60px;
+    color: var(--text-color);
+    font-size: 30px;
+}
