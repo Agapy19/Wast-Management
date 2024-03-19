@@ -1,10 +1,53 @@
+.about {
+  background-image: url('/src/Images/bgabout.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 517px;
+}
+
+.about__text {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about__text h1 {
+  margin-top: 2%;
+  font-weight: bold;
+  font-size: 40px;
+  color: var(--text-color);
+}
+
+.about__text p {
+  width: 40%;
+  margin-top: 2%;
+  font-size: 20px;
+  color: var(--text-color);
+  margin-left: 30%;
+}
 
 .about__text-btn {
   display: flex;
   gap: 5%;
   margin-top: 20px;
-  margin-left: 10%;
+  margin-left: 38%;
 
+}
+
+.btn-about-two {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+}
+
+.btn-about:hover {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+}
+
+.btn-about-two:hover {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 
 /* About vision */
@@ -34,7 +77,7 @@
   color: var(--second-color);
 }
 
-.about-vision-contain-box1 button {
+.about-vision-contain-box1 a {
   margin-top: 15%;
 }
 
@@ -72,7 +115,7 @@
   color: var(--second-color);
 }
 
-.about-mission-contain-box1 button {
+.about-mission-contain-box1 a {
   margin-top: 15%;
 }
 
@@ -116,7 +159,7 @@
   margin-top: 5%;
 }
 
-.about-equipe button {
+.about-equipe a {
   margin-left: 45%;
 }
 
@@ -187,7 +230,7 @@
   color: var(--text-color);
 }
 
-.about-resum-box1 button {
+.about-resum-box1 a {
   margin-top: 5%;
 }
 
@@ -196,4 +239,344 @@
   height: 300px;
   margin-left: 10%;
   margin-top: 10%;
+}
+
+/*Media Query*/
+@media screen and (max-width: 1024px) {
+  .about__text h1 {
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--text-color);
+  }
+
+  .about__text p {
+    width: 80%;
+    margin-top: 5%;
+    font-size: 20px;
+    color: var(--text-color);
+    margin-left: 10%;
+    text-align: center;
+  }
+
+  .about__text-btn {
+    display: flex;
+    gap: 5%;
+    margin-top: 20px;
+    margin-left: 22%;
+
+  }
+
+  .about-vision-contain {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .about-vision-contain-box1 {
+    margin-left: 5%;
+    margin-top: 10%;
+  }
+
+
+
+  .about-vision-contain-box1 p {
+    margin-top: 5%;
+    font-size: 16px;
+    color: var(--second-color);
+  }
+
+  .about-vision-contain-box1 a {
+    margin-top: 20%;
+  }
+
+  .about-vision-contain-box2 img {
+    width: 90%;
+    height: 450px;
+    margin-left: 7%;
+    margin-top: 10%;
+  }
+
+  /* About Mission */
+
+
+  .about-mission-contain {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .about-mission-contain-box1 {
+    margin-left: 5%;
+    margin-top: 2%;
+  }
+
+  .about-mission-contain-box1 h1 {
+    font-size: 40px;
+    color: var(--second-color);
+  }
+
+  .about-mission-contain-box1 p {
+    margin-top: 5%;
+    font-size: 16px;
+    color: var(--second-color);
+  }
+
+  .about-mission-contain-box1 a {
+    margin-top: 20%;
+  }
+
+  .about-mission-contain-box2 img {
+    width: 90%;
+    height: 450px;
+    margin-left: 7%;
+    margin-top: 5%;
+  }
+
+  /* About Value Client */
+  .itm span {
+    font-size: 16px;
+    display: block;
+    color: #687483;
+  }
+
+  /* About Equipe */ 
+  
+  .about-equipe a {
+    margin-left: 35%;
+  }
+
+  .about-equipe-contain {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 10px;
+    margin-left: 8%;
+    margin-top: 5%;
+  }
+  /*About Resum  */
+
+.about-resum {
+  width: 100%;
+  height: 469px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #084130;
+  margin-top: 10%;
+
+}
+
+.about-resum-box1 {
+  margin-left: 15%;
+  margin-top: 10%;
+  /* width: 50%; */
+}
+
+.about-resum-box1 h1 {
+  font-size: 80px;
+  color: var(--main-color);
+}
+
+.about-resum-box1 p {
+  width: 80%;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.about-resum-box1 a {
+  margin-top: 15%;
+}
+
+.about-resum-box2 img {
+  width: 80%;
+  height: 350px;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+}
+@media screen and (max-width: 600px) {
+  .about {
+    background-image: url('/src/Images/bgabout.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 417px;
+  }
+  .about__text h1 {
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--text-color);
+  }
+
+  .about__text p {
+    width: 80%;
+    margin-top: 5%;
+    font-size: 15px;
+    color: var(--text-color);
+    margin-left: 10%;
+    text-align: center;
+  }
+
+  .about__text-btn {
+    display: block;
+    width: 100%;
+    gap: 5%;
+    margin-top: 5px;
+    margin-left: 1%;
+
+  }
+
+  .about-vision-contain {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .about-vision-contain-box1 {
+    margin-left: 0%;
+    margin-top: 20%;
+  }
+  .about-vision-contain-box1 h1 {
+    font-size: 30px;
+  }
+
+
+
+  .about-vision-contain-box1 p {
+    margin-top: 5%;
+    font-size: 13px;
+    color: var(--second-color);
+  }
+
+  .about-vision-contain-box1 a {
+    margin-top: 25%;
+    margin-left: 50%;
+  }
+
+  .about-vision-contain-box2 img {
+    width: 90%;
+    height: 375px;
+    margin-left: 10%;
+    margin-top: 20%;
+  }
+
+  /* About Mission */
+
+
+  .about-mission-contain {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .about-mission-contain-box1 {
+    margin-left: 0%;
+    margin-top: 1%;
+  }
+  .about-mission-contain-box1 h1{
+    font-size: 30px;
+  }
+
+  
+  .about-mission-contain-box1 p {
+    margin-top: 5%;
+    font-size: 13px;
+    color: var(--second-color);
+  }
+
+  .about-mission-contain-box1 a {
+    margin-top: 25%;
+    margin-left: 50%;
+  }
+
+  .about-mission-contain-box2 img {
+     width: 90%;
+    height: 375px;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+
+  /* About Value Client */
+  .about-value-client {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 148px;
+    border: 1px solid #D9D9D9;
+    margin-top: 10%;
+  }
+  
+  .itm h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--second-color);
+    font-weight: bold;
+  }
+  
+  .itm span {
+    font-size: 15px;
+    display: block;
+    color: #687483;
+    margin-left: 0;
+  }
+  /* About Equipe */ 
+  .about-equipe h1 {
+   font-size: 30px;
+  }
+  .about-equipe a {
+    margin-left: 25%;
+  }
+
+  .about-equipe-contain {
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    gap: 10px;
+    margin-left: 0%;
+    margin-top: 5%;
+  }
+  .about-partenaire-contain h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--second-color);
+    margin-top: 5%;
+  }
+  /*About Resum  */
+
+.about-resum {
+  width: 100%;
+  height: 350px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #084130;
+  margin-top: 10%;
+
+}
+
+.about-resum-box1 {
+  margin-left: 0%;
+  margin-top: 10%;
+  /* width: 50%; */
+}
+
+.about-resum-box1 h1 {
+  font-size: 70px;
+  color: var(--main-color);
+}
+
+.about-resum-box1 p {
+  width: 90%;
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+.about-resum-box1 a {
+  margin-top: 15%;
+}
+
+.about-resum-box2 img {
+  width: 100%;
+  height: 300px;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
 }

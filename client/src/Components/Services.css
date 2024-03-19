@@ -1,7 +1,26 @@
-.service{
+.service {
     width: 100%;
-    height: 1438px;
+    height: 517px;
+    background-image: url('/src/Images/bgservice.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
 }
+
+.service__text {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.service__text h2 {
+    color: #fff;
+    margin-top: 5%;
+    font-size: 30px;
+    font-weight: 500;
+    width: 40%;
+    margin-left: 30%;
+}
+
 .service-contain__text {
     text-align: center;
     margin-top: 5%;
@@ -110,7 +129,322 @@
 
 }
 
-.service-contain button {
+.service-contain a {
     margin-left: 45%;
     margin-top: 3%;
+}
+
+/*Media Query*/
+@media screen and (max-width: 1024px) {
+    .service {
+        width: 100%;
+        height: 500px;
+        background-image: url('/src/Images/bgservice.png');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+    }
+
+    .service__text h2 {
+        color: #fff;
+        margin-top: 15%;
+        font-size: 30px;
+        font-weight: 500;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .service a {
+        margin-top: 10%;
+
+    }
+
+    .service-contain__text p {
+        font-size: 20px;
+        margin-top: 3%;
+        margin-left: 4%;
+        width: 90%;
+        color: var(--second-color);
+    }
+
+    .service-contain__contenair {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 5%;
+
+    }
+
+    .box-one {
+        margin-top: 4px;
+        font-size: 20px;
+        background: #F5F5DC;
+        width: 300px;
+        height: 190px;
+        margin-left: 28%;
+
+    }
+
+    .box-one h2
+     {
+        color: var(--second-color);
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10%;
+        margin-left: 20%;
+    }
+
+    .box-one p,
+    .box-five p {
+        width: 70%;
+        color: var(--second-color);
+        text-align: center;
+        margin-left: 15%;
+        margin-top: 5%;
+        font-size: 16px;
+    }
+
+    .box-two {
+        margin-top: 4px;
+        width: 300px;
+        height: 190px;
+        margin-right: 5%;
+
+    }
+
+    .box-two img {
+        width: 300px;
+        height: 190px;
+        margin-right: 5%;
+
+
+    }
+
+    .box-three {
+        width: 300px;
+        height: 190px;
+        margin-left: 28%;
+
+    }
+
+    .box-three img {
+        width: 300px;
+        height: 190px;
+
+
+    }
+
+    .box-four {
+        font-size: 20px;
+        background: #F5F5DC;
+        width: 300px;
+        height: 190px;
+    }
+
+    .box-four h2 {
+        color: var(--second-color);
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+
+    .box-four p {
+        width: 70%;
+        color: var(--second-color);
+        text-align: center;
+        margin-left: 15%;
+        margin-top: 5%;
+        font-size: 13px;
+    }
+
+    .box-five {
+        font-size: 20px;
+        background: #F5F5DC;
+        width: 300px;
+        height: 190px;
+        margin-left: 28%;
+    }
+    .box-five h2
+    {
+       color: var(--second-color);
+       font-size: 18px;
+       font-weight: bold;
+       margin-top: 10%;
+       margin-left: 13%;
+   }
+
+
+    .box-five p {
+        width: 90%;
+        color: var(--second-color);
+        text-align: center;
+        margin-left: 5%;
+        margin-top: 5%;
+        font-size: 13px;
+    }
+
+    .box-six {
+        width: 300px;
+        height: 190px;
+
+
+
+    }
+
+    .box-six img {
+        width: 300px;
+        height: 190px;
+
+    }
+
+    .service-contain a {
+        margin-left: 40%;
+        margin-top: 3%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .service__text h2 {
+        color: #fff;
+        margin-top: 5%;
+        font-size: 30px;
+        font-weight: 500;
+        width: 100%;
+        margin-left: 1%;
+    }
+
+    .service-contain__text p {
+        font-size: 20px;
+        margin-top: 3%;
+        margin-left: 4%;
+        width: 90%;
+        color: var(--second-color);
+    }
+
+    .service-contain__contenair {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 5%;
+
+    }
+
+    .box-one {
+        margin-top: 4px;
+        font-size: 20px;
+        background: #F5F5DC;
+        width: 195px;
+        height: 150px;
+        margin-left: 1%;
+
+    }
+
+    .box-one h2,
+    .box-five h2 {
+        color: var(--second-color);
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 10%;
+        margin-left: 20%;
+    }
+
+    .box-one p,
+    .box-five p {
+        width: 70%;
+        color: var(--second-color);
+        text-align: center;
+        margin-left: 15%;
+        margin-top: 10%;
+        font-size: 10px;
+    }
+
+    .box-two {
+        margin-top: 4px;
+        width: 195px;
+        height: 150px;
+
+    }
+
+    .box-two img {
+        width: 195px;
+        height: 150px;
+
+    }
+
+    .box-three {
+        width: 195px;
+        height: 150px;
+        margin-left: 0%;
+
+
+    }
+
+    .box-three img {
+        width: 195px;
+        height: 150px;
+
+
+    }
+
+    .box-four {
+        font-size: 20px;
+        background: #F5F5DC;
+        width: 195px;
+        height: 150px;
+    }
+
+    .box-four h2 {
+        color: var(--second-color);
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+
+    .box-four p {
+        width: 70%;
+        color: var(--second-color);
+        text-align: center;
+        margin-left: 15%;
+        margin-top: 10%;
+        font-size: 10px;
+    }
+
+    .box-five {
+        font-size: 20px;
+        background: #F5F5DC;
+        width: 195px;
+        height: 150px;
+        margin-left: 0%;
+
+    }
+
+    .box-five p {
+        width: 80%;
+        color: var(--second-color);
+        text-align: center;
+        margin-left: 15%;
+        margin-top: 8%;
+        font-size: 8px;
+    }
+
+    .box-six {
+        width: 195px;
+        height: 150px;
+        margin-left: 0%;
+
+
+    }
+
+    .box-six img {
+        width: 195px;
+        height: 150px;
+
+
+    }
+
+    .service-contain a {
+        margin-left: 25%;
+        margin-top: 3%;
+    }
+
 }

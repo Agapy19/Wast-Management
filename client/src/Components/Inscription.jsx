@@ -139,7 +139,7 @@ function Inscription() {
                     </div>
                     {!isValidConfirmPassword && <span className="error-message">Les mots de passe ne correspondent pas.</span>}
                 </div>
-                <Button color={{ border: "1px solid #7ED957", background: "#fff", color: "#303D4D" }} name="Inscription" onClick={handleSubmit} />
+                <Button color={{ border: "1px solid #008000", background: "#fff", color: "#303D4D" }} name="Inscription" onClick={handleSubmit} />
             </div>
         </div>
     );

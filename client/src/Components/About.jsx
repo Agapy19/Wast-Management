@@ -3,21 +3,24 @@ import Button from './Button';
 import './About.css'
 import Equipe from './Equipe';
 import Header from './Header';
+import TopBar from './TopBar';
+import Footer from './Footer';
 
 const About = () => {
     return (
         <section>
-            <Header/>
-            <div className='about' style={{ backgroundImage: "url('/src/Images/bgabout.png')", backgroundSize: "cover", backgroundPosition: "center", width: " 100%", height: "517px" }}>
+            <TopBar />
+            <Header />
+            <div className='about'>
 
-                <div className="about__text" style={{ padding: "20px", borderRadius: "10px" }}>
-                    <h1 style={{ marginTop: "5%", marginLeft: "10%", color: "#fff", fontSize: "40px", fontWeight: "bold" }}>À Propos De Nous</h1>
-                    <p style={{ marginTop: "2%", width: "40%", marginLeft: "10%", color: "#fff", fontSize: "20px" }}>Plongez dans notre univers dédié à la préservation de l'environnement avec notre entreprise et notre application Wast Management. À travers la collecte, le tri et le débouchage des fosses septiques, nous incarnons une vision où chaque geste compte pour bâtir un avenir plus propre et plus durable.
+                <div className="about__text">
+                    <h1>À Propos De Nous</h1>
+                    <p>Plongez dans notre univers dédié à la préservation de l'environnement avec notre entreprise et notre application Wast Management. À travers la collecte, le tri et le débouchage des fosses septiques, nous incarnons une vision où chaque geste compte pour bâtir un avenir plus propre et plus durable.
                         Bienvenue chez nous, où l'engagement pour la planète guide chacune de nos actions</p>
 
                     <div className="about__text-btn">
-                        <Button color={{ background: "#D19C13", border: " none" }} name="Nos services" to="/services" />
-                        <Button color={{ border: " 1px solid #fff", background: "transparent" }} name="Contactez-nous" to="/contact" />
+                        <a href="/services" className='btn btn-about'>Nos services</a>
+                        <a href="/contact" className='btn btn-about-two'>Contactez-nous</a>
                     </div>
                 </div>
 
@@ -27,7 +30,7 @@ const About = () => {
                     <div className="about-vision-contain-box1">
                         <h1>Notre Vision</h1>
                         <p>Notre vision est de devenir le partenaire incontournable pour une gestion des déchets intelligente et durable. Wast Management  a été  créer  pour révolutionner la manière dont les communautés et les entreprises interagissent avec leurs déchets, en offrant des solutions personnalisées, pratiques et innovantes. Nous nous engageons à promouvoir une culture du zéro déchet en facilitant le tri, la collecte  des déchets et le débouchage des fosses septiques de manière efficace et transparente. Notre objectif ultime est de contribuer à un environnement plus propre et plus sain pour les générations futures, tout en offrant une expérience utilisateur exceptionnelle et enrichissante</p>
-                        <Button color={{ border: " 1px solid #D19C13", background: "#fff", color: "#303D4D" }} name="Abonnez-vous" to="/login" />
+                        <a href="/login" style={{color:"#303D4D"}} className='btn btn-about-two'>Abonnez-vous</a>
                     </div>
                     <div className="about-vision-contain-box2">
                         <img src="src/Images/vision.png" alt="" />
@@ -41,7 +44,7 @@ const About = () => {
                     <div className="about-mission-contain-box1">
                         <h1>Notre Mission</h1>
                         <p>Notre mission est de révolutionner la gestion des déchets en offrant une solution innovante et complète via notre application. Nous nous engageons à aider nos clients à optimiser leurs processus de gestion des déchets, à réduire leurs coûts, à minimiser leur impact environnemental et à assurer une conformité réglementaire rigoureuse. Grâce à notre plateforme, nous visons à simplifier la collecte, le suivi , l'élimination des déchets ainsi que le debouchage des fosses septique, tout en fournissant des outils d'analyse avancés pour une prise de décision éclairée. Notre entreprise s'efforce également de promouvoir la durabilité environnementale et de sensibiliser à l'importance de la gestion responsable des déchets au sein des communautés et des industries que nous servons.</p>
-                        <Button color={{ border: " 1px solid #D19C13", background: "#fff", color: "#303D4D" }} name="Contactez-nous" to="/contact" />
+                        <a href="/contact" style={{color:"#303D4D"}} className='btn btn-about-two'>Contactez-nous</a>
                     </div>
                     <div className="about-mission-contain-box2">
                         <img src="src/Images/mission.png" alt="" />
@@ -52,7 +55,7 @@ const About = () => {
             <div className='about-value-client'>
                 <div className="itm">
                     <h2>70K+</h2>
-                    <span>Clients fidèles</span>
+                    <span>Clients</span>
                 </div>
                 <div className="itm">
                     <h2>30K</h2>
@@ -64,7 +67,7 @@ const About = () => {
                 </div>
                 <div className="itm">
                     <h2>50K+</h2>
-                    <span>Commandes passées</span>
+                    <span>Commandes</span>
                 </div>
             </div>
             {/* About Equipe */}
@@ -82,7 +85,7 @@ const About = () => {
                     <Equipe nom="Ayadra Kyungu" description="conseillère" profile="/src/Images/aya.png" />
                 </div>
 
-                <Button color={{ background: "#D19C13", border: " none" }} name="Contacter" to="/contact" />
+                        <a href="/contact" className='btn'>Contacter</a>
 
 
             </div>
@@ -104,13 +107,14 @@ const About = () => {
                 <div className="about-resum-box1">
                     <h1> " </h1>
                     <p>À travers notre engagement envers l'excellence opérationnelle, l'innovation constante et le respect de l'environnement, nous visons à être le partenaire de confiance de choix pour toutes vos besoins en gestion des déchets</p>
-                    <Button color={{ background: "#D19C13", border: " none" }} name="Contacter" to="/contact" />
+                    <a href="/contact" className='btn btn-about'>Contacter</a>
                 </div>
                 <div className="about-resum-box2">
                     <img src="src/Images/resum.png" alt="" />
                 </div>
 
             </div>
+            <Footer />
         </section>
 
     );

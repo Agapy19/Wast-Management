@@ -9,3 +9,10 @@
     display: flex;
     gap: 10px;
 }
+.servir p{
+    color: var(--second-color);
+}
+.servir .icon{
+    color: var(--second-color);
+
+}

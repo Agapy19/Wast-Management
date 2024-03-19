@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import './Home.css'
 import Header from './Header';
 import TopBar from './TopBar';
+import Footer from './Footer';
 
 
 function Home() {
@@ -23,8 +24,8 @@ function Home() {
                         avec Wast Management
                     </h2>
                     <div className="hom__text-btn">
-                        <Button color={{ background: "#D19C13", border: " none" }} name="Nos services" to="/Services" />
-                        <Button color={{ border: " 1px solid #ffff", background: "transparent" }} name="En savoir plus" to="/About" />
+                        <a href="/contact" className='btn'>Nos services</a>
+                        <a href="/about" className='btn btn-primary'>En savoir plus</a>
                     </div>
                 </div>
 
@@ -48,7 +49,7 @@ function Home() {
                         <ProgressBar name="Tri des dechets" progress={65} />
                         <ProgressBar name="Débouchage des fosses " progress={70} />
                         <ProgressBar name="Collecte des dechets" progress={90} />
-                        <Button color={{ background: "#D19C13", border: " none" }} name="Plus sur nous" to="/About" />
+                        <a href="/about" className='btn'>Plus sur nous</a>
                     </div>
                 </div>
 
@@ -57,7 +58,7 @@ function Home() {
                 <div className='home-about__contain-service'>
                     <h1>Wast Management Services</h1>
                     <p>Waste Management est votre partenaire de confiance pour répondre à tous vos besoins en matière de gestion des déchets. Nous offrons des services de tri, de collecte des déchets et de débouchage des fosses septiques, conçus pour répondre à vos exigences spécifiques. Avec notre engagement envers l'excellence et notre expertise éprouvée, nous vous assurons des solutions fiables et efficaces pour maintenir un environnement propre et sain.</p>
-                    <Button color={{ background: "#D19C13", border: " none" }} name="En savoir plus" to="/Services" />
+                    <a href="/services" className='btn'>En savoir plus</a>
                 </div>
                 <div className='home-about__contain-service-box2'>
                     <img src="src/Images/Rectangle 41.png" alt="" />
@@ -82,7 +83,7 @@ function Home() {
                 <div className="home-contact-contain">
                     <div className="hom-contact-contain-box1">
                         <h1>Nous Offrons Uniquement Des  Services De qualité</h1>
-                        <Button color={{ background: "#D19C13", border: " none" }} name="En savoir plus" to="/contact" />
+                        <a href="/contact" className='btn'>Contactez-nous</a>
                     </div>
                     <div className="hom-contact-contain-box2">
                         <img src="src/Images/dechet.png" alt="" />
@@ -121,7 +122,8 @@ function Home() {
                         color={{ border: "1px solid #7ED957" }} avatar="src/Images/deo.png" />
                 </div>
                 <div className="home-testimony-btn">
-                    <Button color={{ background: "#D19C13", border: " none" }} name="Voir plus" to="/testimony" />
+                    <a href="/testimony" className='btn'>Voir Plus</a>
+
                 </div>
             </div>
             <div className="home-commande">
@@ -142,6 +144,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </main>
         // 
 

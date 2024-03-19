@@ -11,9 +11,10 @@
 .home__text {
   color: var(--text-color);
   margin-top: 140px;
-  width: 30%;
-  margin-left: 10%;
-  font-size: 30px;
+  width: 50%;
+  margin-left: 25%;
+  font-size: 40px;
+  text-align: center;
 }
 
 
@@ -21,43 +22,46 @@
 .hom__text-btn {
   display: flex;
   gap: 10%;
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-left: 25%;
 }
+
+
 
 .home-service {
   display: flex;
   margin-left: 10%;
   width: 80%;
-  height: 20vh;
+  height: 30vh;
   margin-top: -50px;
   border: 1px solid#D9D9D9;
-  gap: 3%;
+  gap: 2%;
 
 }
 
 .home-service img {
-  width: 20%;
-  height: 10vh;
+  width: 25%;
+  height: 20vh;
   margin-top: 3%;
-  margin-left: 8%;
+  margin-left: 5%;
 }
 
 .home-about {
   width: 80%;
   margin-left: 10%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .home-about h1 {
   color: var(--second-color);
   margin-top: 50px;
-  width: 30%;
-  font-size: 30px;
+  width: 40%;
+  font-size: 40px;
 }
 
 .home-about p {
   color: var(--second-color);
-  margin-top: 20px;
+  margin-top: 30px;
   width: 50%;
   font-size: 20px;
 }
@@ -65,7 +69,7 @@
 .home-about__contain {
   display: grid;
   grid-template-columns: 50% 50%;
-  /* margin-top: 10%; */
+  margin-top: 2%;
 }
 
 .home-about__contain img {
@@ -83,7 +87,7 @@
   margin-left: 23%;
 }
 
-.home-about__contain-box2 button {
+.home-about__contain-box2 a {
   margin-left: 23%;
   margin-bottom: 20%;
   margin-top: 10%;
@@ -92,30 +96,33 @@
 
 /* Bar de progression */
 
-.progress-bar-container{
+.progress-bar-container {
   margin-top: 5%;
 }
 
-.progress-bar-fill{
+.progress-bar-fill {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   margin-left: 23%;
 
 }
-.progress-bar-label{
+
+.progress-bar-label {
   font-weight: 500;
   font-size: 20px;
   color: var(--second-color);
 
 }
-.progress-bar-percent{
+
+.progress-bar-percent {
   font-weight: 500;
   font-size: 20px;
   color: var(--second-color);
 }
+
 .progress-bar {
-  width: 80%;
+  width: 75%;
   height: 20px;
   background-color: #D9D9D9;
   border-radius: 10px;
@@ -130,7 +137,7 @@
 .home-about__container {
   display: grid;
   grid-template-columns: 50% 50%;
-  /* margin-top: 10%; */
+  /* margin-top: 2%; */
   width: 80%;
   margin-left: 10%;
 }
@@ -138,22 +145,22 @@
 .home-about__contain-service {
   width: 80%;
   height: 70%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .home-about__contain-service h1 {
   color: var(--second-color);
-  margin-top: -70px;
-  font-size: 30px;
+  margin-top: -60px;
+  font-size: 40px;
 }
 
 .home-about__contain-service p {
   color: var(--second-color);
-  margin-top: 20px;
+  margin-top: 10%;
   font-size: 20px;
 }
 
-.home-about__contain-service button {
+.home-about__contain-service a {
   margin-top: 25%;
 }
 
@@ -165,11 +172,14 @@
 
 .home-about__contain-service-box2 img {
   width: 310px;
+  margin-left: 14%;
+  margin-top: 15%;
 }
 
 /* home client */
 .home-client {
   width: 100%;
+  margin-top: 10%;
 }
 
 .home-client h1 {
@@ -186,7 +196,7 @@
   width: 100%;
   height: 50%;
   margin-left: 30%;
-  margin-top: 5%;
+  margin-top: 8%;
   gap: 5%;
 
 }
@@ -199,7 +209,7 @@
   background-size: cover;
   height: 548px;
   width: 100%;
-  margin-top: 3%;
+  margin-top: 10%;
 }
 
 .home-contact-contain {
@@ -220,7 +230,7 @@
   margin-top: 5%;
 }
 
-.hom-contact-contain-box1 button {
+.hom-contact-contain-box1 a {
   margin-left: 20%;
   margin-top: 15%;
 
@@ -229,6 +239,7 @@
 .value-client {
   display: flex;
   justify-content: space-around;
+
 }
 
 .item {
@@ -250,7 +261,7 @@
 
 /* home testimony */
 .home-testimony {
-  margin-top: 30px;
+  margin-top: 7%;
 }
 
 .home-testimony-text {
@@ -297,7 +308,7 @@
   display: flex;
   gap: 2%;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 .home-testimony-temoignage :hover {
@@ -308,6 +319,7 @@
 .home-testimony-btn {
   display: flex;
   justify-content: center;
+  margin-top: 3%;
 }
 
 .home-commande {
@@ -369,6 +381,12 @@
   color: var(--text-color);
   font-weight: 700;
   font-size: 15px;
+  border: none;
+}
+
+.input-with-button button:hover {
+  background: var(--main-color);
+  color: var(--text-color);
   border: none;
 }
 

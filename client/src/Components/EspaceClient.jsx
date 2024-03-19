@@ -28,9 +28,9 @@ function EspaceClient() {
                     <p>Rester connecté</p>
                 </div>
             </div>
-            <Button color={{ background: "#7ED957", border: "none" }} name="Connexion" to="/services" />
+            <a href="/services" className='button'>Connexion</a>
             <Link to="/inscription">
-                <Button color={{ border: "1px solid #7ED957", background: "#fff", color: "#303D4D" }} name="Inscription" to="/inscription" />
+            <a href="/about" className=' button-primary'>Inscription</a>
             </Link>
         </form>
     );

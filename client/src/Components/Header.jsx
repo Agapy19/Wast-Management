@@ -26,7 +26,7 @@ const Header = () => {
                     </Link>
                     
                 </nav>
-                <Link to="/contact" className="nav-contact">
+                <Link to="/contact" className=" nav-contact">
                         <span>Contactez-nous</span>
                     </Link>
             </div>

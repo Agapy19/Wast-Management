@@ -28,7 +28,7 @@
 }
 
 .inscription-left p {
-    color: var(--bg-color);
+    color: var(--background);
     text-align: center;
     font-size: 1rem;
     font-style: normal;
@@ -131,7 +131,7 @@ label {
     }
 
     .inscription-left button {
-        margin-left: 12%;
+        margin-left: 30%;
     }
 }
 

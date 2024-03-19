@@ -118,7 +118,7 @@ const Contact = () => {
                         <div className='contact-right-reserve__icon'>
                             <div className='contact-right-reserve__icon-text' onClick={() => handleDateSelect(0)}>
                                 {selectedDateIndex === 0 ? <MdRadioButtonChecked className='icon' /> : <MdRadioButtonUnchecked className='icon' />}
-                                <input type="datetime-local" value={selectedDateTime} onChange={handleDateTimeChange} />
+                                <input type="datetime-local" value={selectedDateTime} onChange={handleDateTimeChange} className='input'/>
                             </div>
                             <div className='contact-right-reserve__icon-text' onClick={() => handleDateSelect(1)}>
                                 {selectedDateIndex === 1 ? <MdRadioButtonChecked className='icon' /> : <MdRadioButtonUnchecked className='icon' />}
