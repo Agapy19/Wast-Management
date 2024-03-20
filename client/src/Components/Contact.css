@@ -131,21 +131,326 @@ label {
     display: flex;
     gap: 20px;
 }
-.contact-right-reserve__icon-text p{
+
+.contact-right-reserve__icon-text p {
     color: var(--second-color);
 }
-.contact-right-reserve__icon-text .icon{
+
+.contact-right-reserve__icon-text .icon {
     color: var(--second-color);
 
 }
-.contact-right-reserve__icon-text .input{
-   margin-top: -10px;
+
+.contact-right-reserve__icon-text .input {
+    margin-top: -10px;
 
 }
-.contact-right-service h2{
+
+.contact-right-service h2 {
     color: var(--second-color);
     font-family: var(--font-family);
     font-size: 1.5rem;
     font-style: normal;
     line-height: normal;
 }
+
+@media screen and (max-width: 600px) {
+    .contact {
+        width: 100%;
+        height: 741px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 3%;
+        justify-content: center;
+
+
+
+    }
+
+    .contact-left {
+        display: none;
+
+    }
+
+    .contact-right-input {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 30px;
+        align-items: center;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+
+    .contact-right-input input {
+        display: block;
+        width: 80%;
+        height: 1.5rem;
+        border: 1px solid var(--border-color);
+
+    }
+
+    input {
+        margin-top: 10px;
+    }
+
+    label {
+        font-weight: 400;
+        font-size: 1rem;
+        /* font-size: 16px; */
+    }
+
+    .contact-right-input label {
+        width: 100%;
+        color: var(--second-color);
+        font-family: var(--font-family);
+        font-size: 20px;
+        font-style: normal;
+        line-height: normal;
+
+    }
+
+    .error {
+        color: red;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .contact-right-service {
+        margin-top: 40px;
+    }
+
+    .contact-right-service h2 {
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    .contact-right-message {
+        display: grid;
+        align-items: center;
+        margin-right: 10px;
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    .contact-right-message input {
+        display: flex;
+        padding: 4rem 5rem;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 2rem;
+        border: 1px solid var(--border-color);
+    }
+
+    .contact-right-message label {
+        width: 100%;
+        color: var(--second-color);
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    .contact-right-input input::placeholder {
+        color: #999;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .contact-right-message button {
+        margin-left: 25%;
+    }
+
+
+    .contact-right-reserve h2 {
+        color: var(--second-color);
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    .contact-right-reserve__icon {
+        display: grid;
+        gap: 10px;
+        margin-top: 20px;
+        margin-right: 10%;
+    }
+
+    .contact-right-reserve__icon-text {
+        display: flex;
+        gap: 10px;
+    }
+
+    .contact-right-reserve__icon-text p {
+        font-size: 16px;
+        width: 60%;
+    }
+
+    .contact-right-reserve__icon-text .icon {
+        color: var(--second-color);
+        /* width: 30%;
+        height: 25%;
+     */
+    }
+
+    .contact-right-reserve__icon-text .input {
+        margin-top: -10px;
+        margin-right: 10%;
+        width: 50%;
+
+    }
+
+    .contact-right-service h2 {
+        font-size: 1rem;   
+    }
+}
+/* @media screen and (max-width: 1024px) {
+    .contact {
+        width: 100%;
+        height: 741px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 3%;
+        justify-content: center;
+
+
+
+    }
+
+    .contact-left {
+        display: none;
+
+    }
+
+    .contact-right-input {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 30px;
+        align-items: center;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+
+    .contact-right-input input {
+        display: block;
+        width: 90%;
+        height: 2rem;
+        border: 1px solid var(--border-color);
+
+    }
+
+    input {
+        margin-top: 10px;
+    }
+
+    label {
+        font-weight: 400;
+        font-size: 1.5rem;
+        font-size: 16px;
+    }
+
+    .contact-right-input label {
+        width: 100%;
+        color: var(--second-color);
+        font-family: var(--font-family);
+        font-size: 1.5rem;
+        font-style: normal;
+        line-height: normal;
+
+    }
+
+    .error {
+        color: red;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .contact-right-service {
+        margin-top: 40px;
+    }
+
+    .contact-right-service h2 {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    .contact-right-message {
+        display: grid;
+        align-items: center;
+        margin-right: 10px;
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    .contact-right-message input {
+        display: flex;
+        padding: 4rem 5rem;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 2rem;
+        border: 1px solid var(--border-color);
+    }
+
+    .contact-right-message label {
+        width: 100%;
+        color: var(--second-color);
+        font-family: var(--font-family);
+        font-size: 2rem;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    .contact-right-input input::placeholder {
+        color: #999;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .contact-right-message button {
+        margin-left: 38%;
+    }
+
+
+    .contact-right-reserve h2 {
+        color: var(--second-color);
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    .contact-right-reserve__icon {
+        display: grid;
+        gap: 10px;
+        margin-top: 20px;
+        margin-right: 10%;
+    }
+
+    .contact-right-reserve__icon-text {
+        display: flex;
+        gap: 10px;
+    }
+
+    .contact-right-reserve__icon-text p {
+        font-size: 16px;
+        width: 60%;
+    }
+
+    .contact-right-reserve__icon-text .icon {
+        color: var(--second-color);
+        width: 30%;
+        height: 25%;
+    
+    }
+
+    .contact-right-reserve__icon-text .input {
+        margin-top: -10px;
+        margin-right: 10%;
+        width: 50%;
+
+    }
+
+    .contact-right-service h2 {
+        font-size: 1rem;   
+    }
+} */

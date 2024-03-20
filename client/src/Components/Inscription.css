@@ -1,22 +1,22 @@
-.inscription {
+.sign-in{
     width: 100%;
-    height: 741px;
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 3%;
-    justify-content: center;
-    margin-left: 8%;
-
-
+    height: 100%;
+    background-color: var(--second-color);
 }
-
-.inscription-left {
-    width: 80%;
-    height: 710px;
-    border: 1px solid var(--border-color);
-    margin-top: 20px;
-    margin-left: 40px;
-
+.inscription{
+    /* display: grid;
+    flex-direction: column;
+    justify-content: center; */
+    /* align-items: center; */
+    width: 30%;
+    height: 80%;
+    border: 2px solid var(--border-color);
+    background-color: var(--text-color);
+    margin-left: 35%;
+    /*  */
+}
+.inscription-left{
+    margin-top: 15%;
 }
 
 .inscription-left h1 {
@@ -42,12 +42,12 @@
     display: block;
     gap: 30px;
     align-items: center;
-    margin-right: 30px;
+    margin-left: 15%;
     margin-top: 20px;
 }
 
 .inscription-left-input input {
-    width: 100%;
+    width: 80%;
     height: 2rem;
     border: 1px solid var(--border-color);
     padding-left: 50px;
@@ -92,15 +92,16 @@ label {
 
 .input-icon-right {
     position: absolute;
-    top: 50%;
-    right: 10px;
+    top: 60%;
+    right: 25%;
     transform: translateY(-50%);
     font-size: 20px;
     color: #aaa;
 }
 
-.inscription-left button {
-    margin-left: 40%;
+.inscription-left a {
+    margin-left: 30%;
+    margin-top: 10%;
 }
 
 .error-message {

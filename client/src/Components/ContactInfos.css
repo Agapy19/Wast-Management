@@ -22,3 +22,10 @@
     color: var(--text-color);
     font-size: 30px;
 }
+@media screen and (max-width: 600px) {
+    .contact-info {
+        display: none;
+      
+    }
+    
+}

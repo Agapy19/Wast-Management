@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from "./Button";
 import './Inscription.css';
 import { LiaEyeSolid } from "react-icons/lia";
@@ -67,81 +67,85 @@ function Inscription() {
     };
 
     return (
-        <div className="inscription">
-            <div className="inscription-left">
-                <h1> BIENVENUE</h1>
-                <p>Rejoins-nous dès maintenant!</p>
-                <div className="inscription-left-input">
-                    <label>Email</label>
-                    <div className="input-with-icon">
-                        <MdAlternateEmail className="input-icon" />
-                        <input
-                            type="text"
-                            value={email}
-                            onChange={handleChangeEmail}
-                            className={!isValidEmail ? "input-error" : ""}
-                        />
+        <section className='sign-in' style={{ backgroundColor: "#303D4D", height: "100vh", top: "0" }}>
+            <div className="inscription">
+                <div className="inscription-left">
+                    <h1> BIENVENUE</h1>
+                    <p>Rejoins-nous dès maintenant!</p>
+                    <div className="inscription-left-input">
+                        <label>Email</label>
+                        <div className="input-with-icon">
+                            <MdAlternateEmail className="input-icon" />
+                            <input
+                                type="text"
+                                value={email}
+                                onChange={handleChangeEmail}
+                                className={!isValidEmail ? "input-error" : ""}
+                            />
+                        </div>
+                        {!isValidEmail && <span className="error-message">Adresse e-mail invalide</span>}
                     </div>
-                    {!isValidEmail && <span className="error-message">Adresse e-mail invalide</span>}
-                </div>
-                <div className="inscription-left-input">
-                    <label>Mot de passe</label>
-                    <div className="input-with-icon">
-                        {showPassword ? (
-                            <LiaEyeSolid
-                                className="input-icon-right"
-                                onClick={handleTogglePasswordVisibility}
-                                style={{ cursor: "pointer" }}
+                    <div className="inscription-left-input">
+                        <label>Mot de passe</label>
+                        <div className="input-with-icon">
+                            {showPassword ? (
+                                <LiaEyeSolid
+                                    className="input-icon-right"
+                                    onClick={handleTogglePasswordVisibility}
+                                    style={{ cursor: "pointer" }}
+                                />
+                            ) : (
+                                <PiEyeSlashLight
+                                    className="input-icon-right"
+                                    onClick={handleTogglePasswordVisibility}
+                                    style={{ cursor: "pointer" }}
+                                />
+                            )}
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                value={password}
+                                onChange={handleChangePassword}
+                                className={!isValidPassword ? "input-error" : ""}
                             />
-                        ) : (
-                            <PiEyeSlashLight
-                                className="input-icon-right"
-                                onClick={handleTogglePasswordVisibility}
-                                style={{ cursor: "pointer" }}
-                            />
-                        )}
-                        <input
-                            type={showPassword ? "text" : "password"}
-                            value={password}
-                            onChange={handleChangePassword}
-                            className={!isValidPassword ? "input-error" : ""}
-                        />
-                        <IoKeyOutline className="input-icon" />
-                        <div className="input-line"></div>
+                            <IoKeyOutline className="input-icon" />
+                            <div className="input-line"></div>
+                        </div>
+                        {!isValidPassword && <span className="error-message">Le mot de passe doit contenir au moins une lettre et un chiffre, et avoir une longueur entre 8 et 15 caractères.</span>}
                     </div>
-                    {!isValidPassword && <span className="error-message">Le mot de passe doit contenir au moins une lettre et un chiffre, et avoir une longueur entre 8 et 15 caractères.</span>}
-                </div>
-                <div className="inscription-left-input">
-                    <label>Confirmation du mot de passe</label>
-                    <div className="input-with-icon">
-                        {showPassword ? (
-                            <LiaEyeSolid
-                                className="input-icon-right"
-                                onClick={handleToggleConfirmPasswordVisibility}
-                                style={{ cursor: "pointer" }}
-                            />
-                        ) : (
-                            <PiEyeSlashLight
-                                className="input-icon-right"
-                                onClick={handleToggleConfirmPasswordVisibility}
-                                style={{ cursor: "pointer" }}
-                            />
-                        )}
+                    <div className="inscription-left-input">
+                        <label>Confirmation du mot de passe</label>
+                        <div className="input-with-icon">
+                            {showPassword ? (
+                                <LiaEyeSolid
+                                    className="input-icon-right"
+                                    onClick={handleToggleConfirmPasswordVisibility}
+                                    style={{ cursor: "pointer" }}
+                                />
+                            ) : (
+                                <PiEyeSlashLight
+                                    className="input-icon-right"
+                                    onClick={handleToggleConfirmPasswordVisibility}
+                                    style={{ cursor: "pointer" }}
+                                />
+                            )}
 
-                        <input
-                            type={showConfirmPassword ? "text" : "password"}
-                            value={confirmPassword}
-                            onChange={handleChangeConfirmPassword}
-                            className={!isValidConfirmPassword ? "input-error" : ""}
-                        />
-                        <IoKeyOutline className="input-icon" />
-                        <div className="input-line"></div>
+                            <input
+                                type={showConfirmPassword ? "text" : "password"}
+                                value={confirmPassword}
+                                onChange={handleChangeConfirmPassword}
+                                className={!isValidConfirmPassword ? "input-error" : ""}
+                            />
+                            <IoKeyOutline className="input-icon" />
+                            <div className="input-line"></div>
+                        </div>
+                        {!isValidConfirmPassword && <span className="error-message">Les mots de passe ne correspondent pas.</span>}
                     </div>
-                    {!isValidConfirmPassword && <span className="error-message">Les mots de passe ne correspondent pas.</span>}
+                    <a href="/services" onClick={handleSubmit} className='button'>Inscription</a>
+
                 </div>
-                <Button color={{ border: "1px solid #008000", background: "#fff", color: "#303D4D" }} name="Inscription" onClick={handleSubmit} />
             </div>
-        </div>
+
+        </section>
     );
 }
 
