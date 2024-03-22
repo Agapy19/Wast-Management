@@ -128,7 +128,7 @@ function Home() {
             </div>
             <div className="home-commande">
                 <div className="home-commande-text" style={{ padding: "20px", borderRadius: "10px" }}>
-                    <h1 style={{ marginTop: "4%", width: "30%", color: "#fff", fontSize: "40px", fontWeight: "bold", marginLeft: "10%" }}>Laissez-nous Vous Aider À Planifier Votre Commande</h1>
+                    <h1 >Laissez-nous Vous Aider À Planifier Votre Commande</h1>
                 </div>
                 <div className="home-commande-contain">
                     <p>Optimisez votre gestion des déchets, réduisez vos coûts et renforcez votre engagement envers la durabilité environnementale avec notre application intuitive.Simplifiez vos opérations, gagnez en efficacité et obtenez une tranquillité d'esprit totale en vous abonnant dès aujourd'hui à Wast Management</p>

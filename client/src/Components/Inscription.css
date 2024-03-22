@@ -113,49 +113,132 @@ label {
 
 /*Media Query*/
 @media screen and (max-width: 1024px) {
-    .inscription {
+   .sign-in{
         width: 100%;
-        height: 741px;
-        display: grid;
-        grid-template-columns: 1fr;
-        margin-top: 3%;
-
+        max-height: 100%;
+        background-color: var(--second-color);
     }
-
-    .inscription-left {
-        width: 70%;
-        height: 710px;
+    .inscription{
+        width: 80%;
+        height: 80%;
+        border: 2px solid var(--border-color);
+        background-color: var(--text-color);
+        margin-left: 10%;
+    }
+    .inscription-left{
+        margin-top: 15%;
+    }
+    
+    .inscription-left h1 {
+        color: var(--second-color);
+        text-align: center;
+        margin-top: 5%;
+        font-size: 40px;
+        font-weight: 500;
+    }
+    
+    .inscription-left p {
+        color: var(--background);
+        text-align: center;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 40px;
+    }
+    
+    
+    .inscription-left-input {
+        display: block;
+        gap: 30px;
+        align-items: center;
+        margin-left: 15%;
+        margin-top: 5px;
+    }
+    
+    .inscription-left-input input {
+        width: 80%;
+        height: 2rem;
         border: 1px solid var(--border-color);
-        margin-top: 20px;
-        margin-left: 40px;
-
+        padding-left: 50px;
+        padding-right: 30px
     }
-
-    .inscription-left button {
-        margin-left: 30%;
+    
+    .inscription-left a {
+        margin-left: 35%;
+        margin-top: 5%;
     }
+    
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 3px;
+    }
+    ;
+
 }
 
 @media screen and (max-width: 600px) {
-    .inscription {
+    .sign-in{
         width: 100%;
-        height: 741px;
-        display: grid;
-        grid-template-columns: 1fr;
-        margin-top: 3%;
-
+        max-height: 100%;
+        background-color: var(--second-color);
     }
-
-    .inscription-left {
-        width: 70%;
-        height: 710px;
+    .inscription{
+        width: 80%;
+        height: 80%;
+        border: 2px solid var(--border-color);
+        background-color: var(--text-color);
+        margin-left: 10%;
+    }
+    .inscription-left{
+        margin-top: 15%;
+    }
+    
+    .inscription-left h1 {
+        color: var(--second-color);
+        text-align: center;
+        margin-top: 5%;
+        font-size: 40px;
+        font-weight: 500;
+    }
+    
+    .inscription-left p {
+        color: var(--background);
+        text-align: center;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 40px;
+    }
+    
+    
+    .inscription-left-input {
+        display: block;
+        gap: 30px;
+        align-items: center;
+        margin-left: 15%;
+        margin-top: 5px;
+    }
+    
+    .inscription-left-input input {
+        width: 80%;
+        height: 2rem;
         border: 1px solid var(--border-color);
-        margin-top: 20px;
-        margin-left: 40px;
-
+        padding-left: 50px;
+        padding-right: 30px
     }
-
-    .inscription-left button {
-        margin-left: 12%;
+    
+    .inscription-left a {
+        margin-left: 17%;
+        margin-top: 5%;
     }
-}
+    
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 3px;
+    }
+    ;
+    }

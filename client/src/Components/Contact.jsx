@@ -127,8 +127,8 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className="contact-right-service ">
-                    <h2>Quels services voulez-vous</h2>
+                <div className="contact-right-service">
+                    <h2>Quels services voulez-vous?</h2>
                     <Servir />
                 </div>
                 <div className="contact-right-message">

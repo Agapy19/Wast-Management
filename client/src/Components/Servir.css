@@ -16,3 +16,11 @@
     color: var(--second-color);
 
 }
+@media screen and (max-width: 600px) {
+    .servir p{
+        color: var(--second-color);
+        width: 100%;
+        font-size: 13px;
+    }
+    
+  }

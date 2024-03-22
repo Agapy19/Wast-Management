@@ -154,7 +154,7 @@ label {
     line-height: normal;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
     .contact {
         width: 100%;
         height: 741px;
@@ -174,28 +174,28 @@ label {
 
     .contact-right-input {
         display: grid;
-        grid-template-columns: 50% 50%;
-        gap: 30px;
+        grid-template-columns: 100%;
+        gap: 5px;
         align-items: center;
-        margin-right: 10px;
-        margin-top: 20px;
+        margin-right: 0px;
+        margin-top: 0px;
     }
 
     .contact-right-input input {
         display: block;
-        width: 80%;
-        height: 1.5rem;
+        width: 50%;
+        height: 1rem;
         border: 1px solid var(--border-color);
 
     }
 
     input {
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     label {
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 0.5rem;
         /* font-size: 16px; */
     }
 
@@ -203,7 +203,7 @@ label {
         width: 100%;
         color: var(--second-color);
         font-family: var(--font-family);
-        font-size: 20px;
+        font-size: 10px;
         font-style: normal;
         line-height: normal;
 
@@ -211,17 +211,17 @@ label {
 
     .error {
         color: red;
-        font-size: 10px;
+        font-size: 9px;
         margin-top: 5px;
     }
 
     .contact-right-service {
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .contact-right-service h2 {
-        font-weight: 700;
-        font-size: 25px;
+        font-weight: 500;
+        font-size: 15px;
     }
 
     .contact-right-message {
@@ -254,6 +254,7 @@ label {
     .contact-right-input input::placeholder {
         color: #999;
         font-family: 'Arial', sans-serif;
+        font-size: 10px;
     }
 
     .contact-right-message button {
@@ -264,26 +265,27 @@ label {
     .contact-right-reserve h2 {
         color: var(--second-color);
         font-family: var(--font-family);
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-style: normal;
         line-height: normal;
     }
 
     .contact-right-reserve__icon {
         display: grid;
-        gap: 10px;
+        gap: 5px;
         margin-top: 20px;
         margin-right: 10%;
     }
 
     .contact-right-reserve__icon-text {
         display: flex;
-        gap: 10px;
+        gap: 5px;
+        margin-top: 5px;
     }
 
     .contact-right-reserve__icon-text p {
-        font-size: 16px;
-        width: 60%;
+        font-size: 13px;
+        width: 80%;
     }
 
     .contact-right-reserve__icon-text .icon {
@@ -294,14 +296,168 @@ label {
     }
 
     .contact-right-reserve__icon-text .input {
-        margin-top: -10px;
+        margin-top: -1px;
         margin-right: 10%;
         width: 50%;
 
     }
 
     .contact-right-service h2 {
-        font-size: 1rem;   
+        font-size: 1rem;  
+        font-weight: bold; 
+    }
+}
+@media screen and (max-width: 600px) {
+    .contact {
+        width: 100%;
+        height: 741px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 3%;
+        justify-content: center;
+
+
+
+    }
+
+    .contact-left {
+        display: none;
+
+    }
+
+    .contact-right-input {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 5px;
+        align-items: center;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    .contact-right-input input {
+        display: block;
+        width: 50%;
+        height: 1rem;
+        border: 1px solid var(--border-color);
+
+    }
+
+    input {
+        margin-top: 5px;
+    }
+
+    label {
+        font-weight: 400;
+        font-size: 0.5rem;
+        /* font-size: 16px; */
+    }
+
+    .contact-right-input label {
+        width: 100%;
+        color: var(--second-color);
+        font-family: var(--font-family);
+        font-size: 10px;
+        font-style: normal;
+        line-height: normal;
+
+    }
+
+    .error {
+        color: red;
+        font-size: 9px;
+        margin-top: 5px;
+    }
+
+    .contact-right-service {
+        margin-top: 30px;
+    }
+
+    .contact-right-service h2 {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .contact-right-message {
+        display: grid;
+        align-items: center;
+        margin-right: 10px;
+        margin-top: 40px;
+        gap: 20px;
+    }
+
+    .contact-right-message input {
+        display: flex;
+        padding: 4rem 5rem;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 2rem;
+        border: 1px solid var(--border-color);
+    }
+
+    .contact-right-message label {
+        width: 100%;
+        color: var(--second-color);
+        font-family: var(--font-family);
+        font-size: 1rem;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    .contact-right-input input::placeholder {
+        color: #999;
+        font-family: 'Arial', sans-serif;
+        font-size: 10px;
+    }
+
+    .contact-right-message button {
+        margin-left: 25%;
+    }
+
+
+    .contact-right-reserve h2 {
+        color: var(--second-color);
+        font-family: var(--font-family);
+        font-size: 0.9rem;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    .contact-right-reserve__icon {
+        display: grid;
+        gap: 5px;
+        margin-top: 20px;
+        margin-right: 10%;
+    }
+
+    .contact-right-reserve__icon-text {
+        display: flex;
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    .contact-right-reserve__icon-text p {
+        font-size: 13px;
+        width: 80%;
+    }
+
+    .contact-right-reserve__icon-text .icon {
+        color: var(--second-color);
+        /* width: 30%;
+        height: 25%;
+     */
+    }
+
+    .contact-right-reserve__icon-text .input {
+        margin-top: -1px;
+        margin-right: 10%;
+        width: 50%;
+
+    }
+
+    .contact-right-service h2 {
+        font-size: 1rem;  
+        font-weight: bold; 
     }
 }
 /* @media screen and (max-width: 1024px) {

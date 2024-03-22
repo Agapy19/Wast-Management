@@ -27,7 +27,7 @@ const TopBar = () => {
                     </div>
                     <div className="top-bar-content-icons">
                         <VscLocation  className='icon'/>
-                        <span>123, rue Principale, Ville</span>
+                        <span>123, rue Principale</span>
                     </div>
                   
                 </div>

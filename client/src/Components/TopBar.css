@@ -61,14 +61,9 @@
 .social-links a:hover {
     color: #ccc;
 }
-@media screen and (max-width: 768px) {
-    @media screen and (max-width: 768px) {
-        .top-bar-content {
-            gap: 10px; /* Réduire l'espacement entre les éléments */
-        }
-    
-        .social-links {
-            display: none; /* Cacher les liens sociaux sur les petits écrans */
-        }
+@media screen and (max-width: 1024px) {
+    .top-bar {
+      display: none;
     }
+    
 }
