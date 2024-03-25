@@ -4,9 +4,9 @@ import './Button.css'
 
 function Button(props) {
     return (
-        <Link to={props.to} style={{ textDecoration: "none" }}>
-            <button className="button" style={props.color}>
-                {props.name}
+        <Link to='contact'>
+            <button className="boutton">
+              Contactez-nous
             </button>
         </Link>
     )

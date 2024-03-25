@@ -1,36 +1,47 @@
 // Header.js
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useState } from 'react';
 import './Header.css';
+import Button from './Button';
 
 const Header = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
-        <header>
-            <div className="container-header">
-                <div className="logo">Wast.</div>
-                <nav>
-                    <Link to="/" className="nav-link">
-                        <span>Home</span>
-                    </Link>
-                    <Link to='/about' className="nav-link">
-                        <span>About</span>
-                    </Link>
-                    <Link to="/services" className="nav-link">
-                        <span>Services</span>
-                    </Link>
-                    <Link to="/testimony" className="nav-link">
-                        <span>Testimony</span>
-                    </Link>
-                    <Link to="/login" className="nav-link">
-                        <span>Espace Client</span>
-                    </Link>
+        <>
+            <nav>
+                <Link to='/' className='logo'>Wast.</Link>
+                <div className="menu"onClick={()=>{
+                    setMenuOpen(!menuOpen);
+                }}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul className={menuOpen ? "open" : ""}>
+                    <li>
+                        <NavLink to='/'>Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/about'>About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/services'>Services</NavLink>
+                    </li>
                     
-                </nav>
-                <Link to="/contact" className=" nav-contact">
-                        <span>Contactez-nous</span>
-                    </Link>
-            </div>
-        </header>
+                    <li>
+                        <NavLink to='/login'>Espace Client</NavLink>
+                    </li>
+
+
+                    <Button />
+
+
+                </ul>
+            </nav>
+        
+        </>
     )
 }
 

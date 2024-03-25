@@ -1,19 +1,29 @@
 
-.button {
+.boutton {
     color: var(--text-color);
-    font-weight: 700 !important;
     border-radius: 5px !important;
-    height: 45px;
-    margin-top: 30px;
-    width: 190px;
     cursor: pointer;
     display: inline-block;
-    padding: 0.75rem 1.2rem;
+    padding: 0.5rem;
+
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    font-weight: bold;
   }
-  .button:hover {
-    color: var(--bg-color);
+  .boutton:hover {
+    /* padding: 6px 18px; */
+    transition: var(--transition);
+    color: var(--text-color);
+    background-color: #00cc00;
     border-color: transparent;
+  }
+  @media screen and (max-width: 600px) {
+    .boutton {
+   margin-left: 32%;
+    }
+    
   }
  
