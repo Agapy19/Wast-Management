@@ -28,19 +28,6 @@ exports.signUpUser = async (req, res) => {
             },
         });
 
-        // Création d'un nouveau profil lié à l'utilisateur nouvellement créé
-        const newProfile = await prisma.profile.create({
-            data: {
-                bio: null, // Vous pouvez initialiser ces valeurs à ce que vous voulez
-                avatar: null,
-                cover: null,
-                user: {
-                    connect: {
-                        id: newUser.id, // Lien vers l'utilisateur nouvellement créé
-                    },
-                },
-            },
-        });
 
         res.status(201).json({ newUser, newProfile });
     } catch (error) {
