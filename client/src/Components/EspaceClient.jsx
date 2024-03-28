@@ -1,20 +1,33 @@
 import React, { useState } from 'react';
 import './EspaceClient.css';
 import Button from './Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MdOutlineCheckBoxOutlineBlank, MdCheckBox } from "react-icons/md";
+import axios from 'axios';
 
 function EspaceClient() {
     const [isChecked, setIsChecked] = useState(false);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleCheckBoxClick = () => {
         setIsChecked(!isChecked);
     };
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    function handleSubmit(event) {
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
-    }
+
+        try {
+            const response = await axios.post('http://localhost:3002/login', { email, password });
+
+            console.log(response.data);
+
+            navigate('/contact');
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
         <form onSubmit={handleSubmit}>
@@ -25,7 +38,7 @@ function EspaceClient() {
                     <label>Email</label>
                     <input type="email" onChange={e => setEmail(e.target.value)} />
                     <label>Mot de passe</label>
-                    <input type="text" onChange={e => setPassword(e.target.value)} />
+                    <input type="password" onChange={e => setPassword(e.target.value)} />
                     <span>Mot de passe oublié ?</span>
                 </div>
                 <div className="login-connect" onClick={handleCheckBoxClick}>
@@ -33,9 +46,9 @@ function EspaceClient() {
                     <p>Rester connecté</p>
                 </div>
             </div>
-            <a href="/services" className='button'>Connexion</a>
+            <button type="submit" className='button'>Connexion</button>
             <Link to="/inscription">
-                <a href="/about" className=' button-primary'>Inscription</a>
+                <button type="button" className='button-primary'>Inscription</button>
             </Link>
         </form>
     );

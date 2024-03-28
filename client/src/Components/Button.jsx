@@ -4,7 +4,7 @@ import './Button.css'
 
 function Button(props) {
     return (
-        <Link to='contact'>
+        <Link to='/contact'>
             <button className="boutton">
               Contactez-nous
             </button>

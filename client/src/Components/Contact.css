@@ -55,7 +55,7 @@ label {
 .contact-right-input label {
     width: 100%;
     color: var(--second-color);
-    font-family: var(--font-family);
+    /* font-family: var(--font-family); */
     font-size: 1.5rem;
     font-style: normal;
     line-height: normal;

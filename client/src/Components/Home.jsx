@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from './Button';
 import ProgressBar from './ProgressBar'
 import Hometestimony from './homeTestimony';
 import { Link } from "react-router-dom";
@@ -24,8 +23,9 @@ function Home() {
                         avec Wast Management
                     </h2>
                     <div className="hom__text-btn">
-                        <a href="/contact" className='btn'>Nos services</a>
                         <a href="/about" className='btn btn-primary'>En savoir plus</a>
+
+                        <a href="/services" className='btn'>Nos services</a>
                     </div>
                 </div>
 

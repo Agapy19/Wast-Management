@@ -21,6 +21,7 @@ function Inscription() {
         const { value } = event.target;
         setName(value);
     };
+
     const handleChangeEmail = (event) => {
         const { value } = event.target;
         setEmail(value);
@@ -57,21 +58,24 @@ function Inscription() {
         return passwordRegex.test(password);
     };
 
+    const addUser = async () => {
+        try {
+            const values = {
+                name: name,
+                email: email,
+                password: password,
+                confirmPassword: confirmPassword
+            };
+            const response = await axios.post('http://localhost:3002/signUp', values);
+            console.log(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        const values = {
-            name: name,
-            email: email,
-            password: password,
-            confirmPassword: confirmPassword
-        };
-        axios.post('http://localhost:3001/signUp', values)
-            .then(response => {
-                console.log(response.data);
-            })
-            .catch(error => {
-                console.error(error);
-            });
+        addUser();
     };
 
     return (

@@ -18,6 +18,18 @@ model User {
   email    String   @unique
   name     String
   password String
+  adress   String 
+  confirmPassword String
+
+}
+
+model Service {
+  id       Int      @id @default(autoincrement())
+  name    String   
+  num     Int
+  type    String
+  description String
+  date     DateTime
 
 }
 

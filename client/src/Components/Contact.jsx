@@ -134,7 +134,8 @@ const Contact = () => {
                 <div className="contact-right-message">
                     <label htmlFor="text">Entrez votre message</label>
                     <input type="text" />
-                    <Button color={{ background: "#D19C13", border: "none" }} name="Envoyer" />
+                    <a href="/" className='btn btn-primary'>Envoyer</a>
+
                 </div>
             </div>
         </div>
