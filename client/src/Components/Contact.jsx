@@ -20,6 +20,7 @@ const Contact = () => {
     const [phoneError, setPhoneError] = useState('');
     const [selectedDateIndex, setSelectedDateIndex] = useState(null);
     const [selectedDateTime, setSelectedDateTime] = useState('');
+    const [message, setMessage] = useState('');
 
     // VALIDATION DU PRENOM
     const validateFirstName = (value) => {
@@ -55,14 +56,14 @@ const Contact = () => {
         const vodacomNumber = /^(\+243)?(\s|-)?(82|81|80)\d{7}$/;
         const orangeNumber = /^(\+243)?(\s|-)?(83|84|85|89)\d{7}$/;
         const africellNumber = /^(\+243)?(\s|-)?(90|91)\d{7}$/;
-    
+
         if (!airtelNumber.test(value) && !vodacomNumber.test(value) && !orangeNumber.test(value) && !africellNumber.test(value)) {
             setPhoneError("Entrez un numéro de téléphone valide pour la RDC (Airtel, Vodacom, Orange ou Africell)");
         } else {
             setPhoneError("");
         }
     };
-    
+
 
     // VALIDATION DE L'ADRESSE DU DOMICILE
     const validateAddress = (value) => {
@@ -84,6 +85,24 @@ const Contact = () => {
     const handleDateSelect = (index) => {
         setSelectedDateIndex(index);
     };
+    const sendMessage = async () => {
+        try {
+            await axios.post('/send-email', {
+                firstName,
+                lastName,
+                phone,
+                address,
+                email,
+                selectedDateTime,
+                message
+            });
+            alert('Votre message a été envoyé avec succès.');
+        } catch (error) {
+            console.error('Une erreur s\'est produite lors de l\'envoi du message:', error);
+            alert('Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer plus tard.');
+        }
+    };
+
 
     return (
         <div className="contact">
@@ -118,7 +137,7 @@ const Contact = () => {
                         <div className='contact-right-reserve__icon'>
                             <div className='contact-right-reserve__icon-text' onClick={() => handleDateSelect(0)}>
                                 {selectedDateIndex === 0 ? <MdRadioButtonChecked className='icon' /> : <MdRadioButtonUnchecked className='icon' />}
-                                <input type="datetime-local" value={selectedDateTime} onChange={handleDateTimeChange} className='input'/>
+                                <input type="datetime-local" value={selectedDateTime} onChange={handleDateTimeChange} className='input' />
                             </div>
                             <div className='contact-right-reserve__icon-text' onClick={() => handleDateSelect(1)}>
                                 {selectedDateIndex === 1 ? <MdRadioButtonChecked className='icon' /> : <MdRadioButtonUnchecked className='icon' />}
@@ -133,9 +152,8 @@ const Contact = () => {
                 </div>
                 <div className="contact-right-message">
                     <label htmlFor="text">Entrez votre message</label>
-                    <input type="text" />
-                    <a href="/" className='btn btn-primary'>Envoyer</a>
-
+                    <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
+                    <button onClick={sendMessage} className='btn btn-primary'>Envoyer</button>
                 </div>
             </div>
         </div>

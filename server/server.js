@@ -42,7 +42,7 @@ app.post('/login', async (req, res) => {
 
 
 app.post('/signup', async (req, res) => {
-    const { email, password, name,  confirmPassword } = req.body;
+    const { email, password, name, confirmPassword } = req.body;
 
     try {
         const existingUser = await prisma.user.findUnique({
@@ -69,6 +69,44 @@ app.post('/signup', async (req, res) => {
     } catch (error) {
         console.error('Erreur lors de la création du compte:', error);
         res.status(500).json({ error: 'Une erreur est survenue lors de la création du compte' });
+    }
+});
+
+app.post('/send-email', async (req, res) => {
+    const { email, firstName, lastName, phone, address, selectedDateTime, message } = req.body;
+
+    try {
+        // Récupérer l'utilisateur à partir de la base de données en utilisant son adresse email
+        const user = await prisma.user.findUnique({
+            where: {
+                email: email
+            }
+        });
+
+        if (!user) {
+            return res.status(404).json({ error: 'Utilisateur non trouvé.' });
+        }
+
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'mafoagapy697@gmail.com', // Votre adresse email
+                pass: '1902Kyungu' // Votre mot de passe
+            }
+        });
+
+        let mailOptions = {
+            from: user.email, // Adresse email de l'expéditeur récupérée depuis la base de données
+            to: 'mafoagapy697@gmail.com', // Votre adresse email
+            subject: 'Nouveau message de contact',
+            text: `Prénom: ${firstName}\nNom: ${lastName}\nTéléphone: ${phone}\nAdresse: ${address}\nEmail: ${email}\nDate et heure préférées: ${selectedDateTime}\nMessage: ${message}`
+        };
+
+        await transporter.sendMail(mailOptions);
+        res.status(200).json({ message: 'Email envoyé avec succès.' });
+    } catch (error) {
+        console.error('Une erreur s\'est produite lors de l\'envoi du message:', error);
+        res.status(500).json({ error: 'Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer plus tard.' });
     }
 });
 

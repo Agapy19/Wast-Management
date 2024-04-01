@@ -66,6 +66,47 @@ nav .menu span {
   height: 0.4rem;
   border-radius: 0.2rem;
 }
+@media screen and (max-width: 1024px) {
+  nav .menu {
+    display: flex;
+
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: start;
+    height: 50vh;
+    position: relative;
+  }
+  
+  nav .logo {
+    margin-left: 0rem;
+    margin-top: 3%;
+   
+  }
+  
+
+  nav ul {
+    /* display: none; */
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.2rem;
+  }
+  nav ul.open{
+    display: flex;
+  }
+  
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li a{
+   margin: 0.2rem 0.5rem;
+  }
+
+
+}
 
 @media screen and (max-width: 600px) {
   nav .menu {
@@ -91,7 +132,7 @@ nav .menu span {
     /* display: none; */
     flex-direction: column;
     width: 100%;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
   }
   nav ul.open{
     display: flex;

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-contain">
-        <h1>WAST.</h1>
+        <h1 className='logo-title'>WAST.</h1>
         <p>Optez pour une gestion des déchets révolutionnaire avec notre application, qui offre des solutions pratiques pour trier, collecter et suivre vos déchets, tout en vous engageant dans un mouvement vers un avenir plus durable et respectueux de l'environnement</p>
         <div className="bar"></div>
         <div className="container-footer-nav">

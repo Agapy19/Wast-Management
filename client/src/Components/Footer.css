@@ -12,10 +12,14 @@
     text-align: center;
 }
 
-.footer-contain h1 {
+.footer .footer-contain h1 {
     color: var(--text-color);
+    /* margin-top: 2%; */
 
-
+}
+.logo-title{
+    color: var(--text-color);
+    /* margin-top: 2px; */
 }
 
 .footer-contain p {
@@ -91,6 +95,7 @@
     align-items: center;
     margin-top: 2%;
 }
+
 @media screen and (max-width: 1024px) {
     .footer {
         height: 350px;
