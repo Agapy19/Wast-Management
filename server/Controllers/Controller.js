@@ -4,41 +4,10 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const { PrismaClient } = require('@prisma/client');
 const nodemailer = require('nodemailer');
-require('dotenv').config();
-
-const app = express();
-app.use(express.json());
-app.use(cors());
 
 const prisma = new PrismaClient();
 
-async function sendWelcomeEmail(userEmail) {
-    try {
-        let transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: process.env.EMAIL_ADDRESS,
-                pass: process.env.EMAIL_PASSWORD
-            }
-        });
-
-        let mailOptions = {
-            from: process.env.EMAIL_ADDRESS,
-            to: userEmail,
-            subject: 'Bienvenue sur notre application',
-            text: 'Bonjour, \n\nVotre inscription a été réussie. Bienvenue sur notre application !'
-        };
-
-        let info = await transporter.sendMail(mailOptions);
-        console.log('E-mail envoyé:', info.response);
-    } catch (error) {
-        console.error('Erreur lors de l\'envoi de l\'e-mail:', error);
-        throw new Error('Une erreur est survenue lors de l\'envoi de l\'e-mail');
-    }
-}
-
-// Route pour la connexion
-app.post('/login', async (req, res) => {
+async function login(req, res) {
     const { email, password } = req.body;
 
     try {
@@ -63,11 +32,11 @@ app.post('/login', async (req, res) => {
         console.error('Erreur de connexion:', error);
         res.status(500).json({ error: 'Une erreur est survenue lors de la connexion' });
     }
-});
+};
 
-// Route pour l'inscription
-app.post('/signup', async (req, res) => {
+async function signUp(req, res) {
     const { email, password, name, confirmPassword } = req.body;
+
     try {
         const existingUser = await prisma.user.findUnique({
             where: {
@@ -89,15 +58,40 @@ app.post('/signup', async (req, res) => {
             },
         });
 
-        await sendWelcomeEmail(email);
-
         res.status(201).json({ message: 'Utilisateur créé avec succès', user: newUser });
     } catch (error) {
         console.error('Erreur lors de la création du compte:', error);
         res.status(500).json({ error: 'Une erreur est survenue lors de la création du compte' });
     }
-});
+};
 
-app.listen(3002, () => {
-    console.log('Serveur à l\'écoute sur le port 3002');
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module.exports = {
+    login,
+    signUp
+}
