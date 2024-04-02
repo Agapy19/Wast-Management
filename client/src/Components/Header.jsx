@@ -20,7 +20,7 @@ const Header = () => {
                     <span></span>
                     <span></span>
                 </div>
-                <ul className={menuOpen ? "open" : ""}>
+                <ul className={menuOpen ? "open" : "close"}>
                     <li>
                         <NavLink to='/' onClick={toggleMenu}>Home</NavLink>
                     </li>
