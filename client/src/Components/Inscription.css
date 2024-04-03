@@ -1,46 +1,39 @@
-.sign-in{
+.inscription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-color);
     width: 100%;
-    height: 100%;
-    background-color: var(--second-color);
+    height: 100vh;
 }
 
-.inscription{
-    width: 30%;
-    height: 90%;
-    border: 2px solid var(--border-color);
-    background-color: var(--text-color);
-    margin-left: 35%;
-    /*  */
-}
-.inscription-left{
-    margin-top: 5%;
+.inscription-left {
+    width: 50%;
+    background: transparent;
+    border: 1px solid #bdc3c7;
 }
 
 .inscription-left h1 {
-    color: var(--second-color);
+    color: var(--text-color);
     text-align: center;
-    margin-top: 5%;
+    margin-top: 2%;
     font-size: 40px;
-    font-weight: 500;
 }
 
 .inscription-left p {
     color: var(--background);
+    margin-top: 3%;
     text-align: center;
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-bottom: 60px;
 }
-
 
 .inscription-left-input {
     display: block;
     gap: 30px;
     align-items: center;
-    margin-left: 15%;
-    margin-top: 20px;
 }
 
 .inscription-left-input input {
@@ -51,8 +44,9 @@
     padding-right: 30px
 }
 
-input {
-    margin-top: 10px;
+.inscription-left a {
+    margin-left: 17%;
+    margin-top: 5%;
 }
 
 label {
@@ -61,11 +55,11 @@ label {
 
 .inscription-left-input label {
     width: 100%;
-    color: var(--gray-clair-color);
+    color: var(--text-color);
     font-family: var(--font-family);
     font-size: 1rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     line-height: normal;
 }
 
@@ -106,26 +100,31 @@ label {
     font-size: 14px;
     margin-top: 5px;
 }
-
+.button:hover{
+    background: var(--main-color);
+    color: var(--text-color);
+}
 
 /*Media Query*/
 @media screen and (max-width: 1024px) {
-   .sign-in{
+    .sign-in {
         width: 100%;
         max-height: 100%;
         background-color: var(--second-color);
     }
-    .inscription{
+
+    .inscription {
         width: 80%;
         height: 80%;
         border: 2px solid var(--border-color);
         background-color: var(--text-color);
         margin-left: 10%;
     }
-    .inscription-left{
+
+    .inscription-left {
         margin-top: 15%;
     }
-    
+
     .inscription-left h1 {
         color: var(--second-color);
         text-align: center;
@@ -133,7 +132,7 @@ label {
         font-size: 40px;
         font-weight: 500;
     }
-    
+
     .inscription-left p {
         color: var(--background);
         text-align: center;
@@ -143,55 +142,60 @@ label {
         line-height: normal;
         margin-bottom: 40px;
     }
-    
-    
+
+
     .inscription-left-input {
         display: block;
         gap: 30px;
         align-items: center;
         margin-left: 15%;
         margin-top: 5px;
+
     }
-    
+
     .inscription-left-input input {
         width: 80%;
         height: 2rem;
         border: 1px solid var(--border-color);
         padding-left: 50px;
-        padding-right: 30px
+        padding-right: 30px;
+
     }
-    
-    .inscription-left a {
-        margin-left: 35%;
-        margin-top: 5%;
+
+    .inscription-left-input button:hover {
+        background: var(--main-color);
     }
-    
+
+
     .error-message {
         color: red;
         font-size: 14px;
         margin-top: 3px;
     }
+
     ;
 
 }
 
 @media screen and (max-width: 600px) {
-    .sign-in{
+    .sign-in {
         width: 100%;
         max-height: 100%;
         background-color: var(--second-color);
     }
-    .inscription{
+
+    .inscription {
         width: 80%;
         height: 80%;
         border: 2px solid var(--border-color);
         background-color: var(--text-color);
         margin-left: 10%;
     }
-    .inscription-left{
+
+    .inscription-left {
         margin-top: 15%;
     }
-    
+
     .inscription-left h1 {
         color: var(--second-color);
         text-align: center;
@@ -199,7 +203,7 @@ label {
         font-size: 40px;
         font-weight: 500;
     }
-    
+
     .inscription-left p {
         color: var(--background);
         text-align: center;
@@ -209,8 +213,8 @@ label {
         line-height: normal;
         margin-bottom: 40px;
     }
-    
-    
+
+
     .inscription-left-input {
         display: block;
         gap: 30px;
@@ -218,7 +222,7 @@ label {
         margin-left: 15%;
         margin-top: 5px;
     }
-    
+
     .inscription-left-input input {
         width: 80%;
         height: 2rem;
@@ -226,16 +230,17 @@ label {
         padding-left: 50px;
         padding-right: 30px
     }
-    
+
     .inscription-left a {
         margin-left: 17%;
         margin-top: 5%;
     }
-    
+
     .error-message {
         color: red;
         font-size: 14px;
         margin-top: 3px;
     }
+
     ;
-    }
+}

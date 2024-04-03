@@ -79,7 +79,7 @@ function Inscription() {
     };
 
     return (
-        <section className='sign-in' style={{ backgroundColor: "#303D4D", height: "100vh" }}>
+        <div className='sign-in'>
             <div className="inscription">
                 <div className="inscription-left">
                     <h1> BIENVENUE</h1>
@@ -164,8 +164,8 @@ function Inscription() {
                         <button type="submit" className='button'>Inscription</button>
                     </form>
                 </div>
-            </div >
-        </section >
+            </div>
+        </div>
     );
 }
 

@@ -20,6 +20,13 @@
     background-color: #00cc00;
     border-color: transparent;
   }
+
+  @media screen and (max-width: 1024px) {
+    .boutton {
+   margin-left: 42%;
+    }
+    
+  }
   @media screen and (max-width: 600px) {
     .boutton {
    margin-left: 32%;
