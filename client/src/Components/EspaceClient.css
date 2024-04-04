@@ -93,6 +93,7 @@ form {
     border: 1px solid var(--background);
     transition: var(--transition);
     background-color: var(--background);
+    margin-left: 5%;
 }
 
 .button:hover {

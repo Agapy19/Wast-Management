@@ -5,6 +5,8 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { MdAlternateEmail } from "react-icons/md";
 import { IoKeyOutline } from "react-icons/io5";
 import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 function Inscription() {
     const [email, setEmail] = useState("");
@@ -16,6 +18,10 @@ function Inscription() {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [name, setName] = useState("");
+    const [registrationSuccess, setRegistrationSuccess] = useState(false); 
+    const [registrationError, setRegistrationError] = useState(""); 
+    const navigate = useNavigate();
+    
 
     const handleChangeName = (event) => {
         const { value } = event.target;
@@ -68,8 +74,17 @@ function Inscription() {
             };
             const response = await axios.post('http://localhost:3002/signUp', values);
             console.log(response.data);
+            setRegistrationSuccess(true); 
+            setRegistrationError(""); 
+            setName(""); 
+            setEmail("");
+            setPassword("");
+            setConfirmPassword("");
+            navigate('/contact');
+
         } catch (error) {
-            console.error(error);
+            console.error(error.response.data.error);
+            setRegistrationError(error.response.data.error); 
         }
     };
 
@@ -84,6 +99,16 @@ function Inscription() {
                 <div className="inscription-left">
                     <h1> BIENVENUE</h1>
                     <p>Rejoins-nous dès maintenant!</p>
+                    {registrationSuccess && (
+                        <div className="success-alert">
+                            Inscription réussie! Vous pouvez maintenant vous connecter.
+                        </div>
+                    )}
+                    {registrationError && (
+                        <div className="error-alert">
+                            {registrationError}
+                        </div>
+                    )}
                     <form onSubmit={handleSubmit}>
                         <div className="inscription-left-input">
                             <label>Nom complet</label>

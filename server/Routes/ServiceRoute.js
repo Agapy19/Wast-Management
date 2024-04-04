@@ -1,8 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const { body, validationResult } = require('express-validator');
 const nodemailer = require('nodemailer');
 
-router.post('/send-email', async (req, res) => {
+router.post('/send-email', [
+    body('firstName').notEmpty().withMessage('Le prénom est requis'),
+    body('lastName').notEmpty().withMessage('Le nom est requis'),
+    body('email').isEmail().withMessage('Veuillez fournir une adresse e-mail valide'),
+    body('message').notEmpty().withMessage('Le message est requis')
+], async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
+
     const { firstName, lastName, phone, address, email, selectedDateTime, message } = req.body;
 
     try {
@@ -16,16 +27,16 @@ router.post('/send-email', async (req, res) => {
 
         let mailOptions = {
             from: process.env.EMAIL_ADDRESS,
-            to: 'recipient@example.com', // Mettez l'adresse e-mail du destinataire ici
+            to: 'recipient@example.com',
             subject: 'Nouveau message de contact depuis votre site web',
             text: `
-        Nom: ${firstName} ${lastName}
-        Téléphone: ${phone}
-        Adresse: ${address}
-        E-mail: ${email}
-        Date et heure de disponibilité: ${selectedDateTime}
-        Message: ${message}
-      `
+                Nom: ${firstName} ${lastName}
+                Téléphone: ${phone || 'Non fourni'}
+                Adresse: ${address || 'Non fournie'}
+                E-mail: ${email}
+                Date et heure de disponibilité: ${selectedDateTime || 'Non fournie'}
+                Message: ${message}
+            `
         };
 
         let info = await transporter.sendMail(mailOptions);

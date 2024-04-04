@@ -8,9 +8,12 @@ const service = require('/home/user-15-c1/Documents/PROJET/Wast management/serve
 require('dotenv').config();
 
 
+
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(service);
+
 
 const prisma = new PrismaClient();
 

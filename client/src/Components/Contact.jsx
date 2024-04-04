@@ -6,6 +6,7 @@ import Button from './Button';
 import ContactInfos from './ContactInfos';
 import { MdRadioButtonUnchecked, MdRadioButtonChecked } from "react-icons/md";
 import Header from './Header';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
     const [firstName, setFirstName] = useState('');
@@ -85,24 +86,26 @@ const Contact = () => {
     const handleDateSelect = (index) => {
         setSelectedDateIndex(index);
     };
-    const sendMessage = async () => {
-        try {
-            await axios.post('/send-email', {
-                firstName,
-                lastName,
-                phone,
-                address,
-                email,
-                selectedDateTime,
-                message
-            });
-            alert('Votre message a été envoyé avec succès.');
-        } catch (error) {
-            console.error('Une erreur s\'est produite lors de l\'envoi du message:', error);
-            alert('Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer plus tard.');
-        }
-    };
 
+    const sendMessage = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_zar3l1m', 'template_8eatfzv', e.target, 'ZiTN_ZQcU0dWjm1Zn')
+            .then((result) => {
+                console.log(result.text);
+                alert('Votre message a été envoyé avec succès.');
+                setFirstName('');
+                setLastName('');
+                setPhone('');
+                setAddress('');
+                setEmail('');
+                setSelectedDateTime('');
+                setMessage('');
+                setSelectedDateIndex(null);
+            }, (error) => {
+                console.log(error.text);
+                alert('Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer plus tard.');
+            });
+    };
 
     return (
         <div className="contact">
@@ -112,23 +115,23 @@ const Contact = () => {
             </div>
             <div className="contact-right ">
                 <div className='contact-right-input'>
-                    <Input mylabel="Prénom" error={firstNameError} placeholder={"Votre prénom..."} value={firstName} onChange={(e) => {
+                    <Input  mylabel="Prénom" error={firstNameError} placeholder={"Votre prénom..."} value={firstName} onChange={(e) => {
                         setFirstName(e.target.value);
                         validateFirstName(e.target.value);
                     }} />
-                    <Input mylabel="Nom" error={lastNameError} placeholder={"Votre nom..."} value={lastName} onChange={(e) => {
+                    <Input  mylabel="Nom" error={lastNameError} placeholder={"Votre nom..."} value={lastName} onChange={(e) => {
                         setLastName(e.target.value);
                         validateLastName(e.target.value);
                     }} />
-                    <Input mylabel="Téléphone" error={phoneError} placeholder={"Votre téléphone..."} value={phone} onChange={(e) => {
+                    <Input  mylabel="Téléphone" error={phoneError} placeholder={"Votre téléphone..."} value={phone} onChange={(e) => {
                         setPhone(e.target.value);
                         validatePhone(e.target.value);
                     }} />
-                    <Input mylabel="Adresse" error={addressError} placeholder={"Votre adresse..."} value={address} onChange={(e) => {
+                    <Input  mylabel="Adresse" error={addressError} placeholder={"Votre adresse..."} value={address} onChange={(e) => {
                         setAddress(e.target.value);
                         validateAddress(e.target.value);
                     }} />
-                    <Input mylabel="Email" error={emailError} placeholder={"Votre adresse email..."} value={email} onChange={(e) => {
+                    <Input type={email} mylabel="Email" error={emailError} placeholder={"Votre adresse email..."} value={email} onChange={(e) => {
                         setEmail(e.target.value);
                         validateEmail(e.target.value);
                     }} />
@@ -151,9 +154,11 @@ const Contact = () => {
                     <Servir />
                 </div>
                 <div className="contact-right-message">
-                    <label htmlFor="text">Entrez votre message</label>
-                    <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
-                    <button onClick={sendMessage} className='btn btn-primary'>Envoyer</button>
+                    <form onSubmit={sendMessage}>
+                        <label htmlFor="text">Entrez votre message</label>
+                        <input type="text" name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
+                        <button type="submit" className='btn btn-primary'>Envoyer</button>
+                    </form>
                 </div>
             </div>
         </div>

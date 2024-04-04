@@ -9,6 +9,7 @@ function EspaceClient() {
     const [isChecked, setIsChecked] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loginSuccess, setLoginSuccess] = useState(false); 
     const navigate = useNavigate();
 
     const handleCheckBoxClick = () => {
@@ -22,6 +23,7 @@ function EspaceClient() {
             const response = await axios.post('http://localhost:3002/login', { email, password });
 
             console.log(response.data);
+            setLoginSuccess(true); 
 
             navigate('/contact');
         } catch (error) {
@@ -50,6 +52,11 @@ function EspaceClient() {
             <Link to="/inscription">
                 <button type="button" className='button-primary'>Inscription</button>
             </Link>
+            {loginSuccess && ( 
+                <div className="success-alert">
+                    Connexion réussie!
+                </div>
+            )}
         </form>
     );
 }
